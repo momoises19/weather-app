@@ -25,8 +25,11 @@ const data2 = {
     wind: '30 m/s',
 }
 
+/* cambiamos de componente funcional a clase este elemento 
+para poder usar otros metodos */
 class WeatherLocation extends Component {
-
+    //aqui se establece el estado inicial del componente
+    //es lo que cargara en primera instancia 
     constructor(){
         super();
         this.state={
@@ -35,11 +38,11 @@ class WeatherLocation extends Component {
         }
     }
 
+    //aqui es donde ira el llamado del evento onClick y rederizara los nuevos datos
     handleUpdateClick = ()=>{
-        console.log("actualizado");
+        console.log("excelente :D");
 
         this.setState({
-            city: 'Daule',
             data: data2,
         });
     }
